@@ -1,0 +1,495 @@
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #e85d8e;
+  --deep-pink: #c83f73;
+  --light-pink: #fff0f5;
+  --cream: #fffaf8;
+  --text: #543443;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  background:
+    radial-gradient(circle at 15% 20%, #ffd9e8 0, transparent 30%),
+    radial-gradient(circle at 85% 75%, #ffe5ed 0, transparent 30%),
+    linear-gradient(135deg, #fff7fa, #ffeaf2);
+  position: relative;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 8vw, 5.8rem);
+  line-height: 1.2;
+  color: #683b50;
+  margin-bottom: 24px;
+}
+
+h1 span {
+  font-family: "Great Vibes", cursive;
+  color: var(--pink);
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.subtitle,
+.section-intro {
+  max-width: 600px;
+  line-height: 1.9;
+  color: #866b79;
+  font-size: 0.96rem;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #f47da7, #d94b80);
+  color: white;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 28px;
+  box-shadow: 0 8px 24px #e85d8e38;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #e85d8e50;
+}
+
+.scroll-note {
+  position: absolute;
+  bottom: 28px;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #ad8497;
+}
+
+.section {
+  padding: 100px 24px;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 400;
+  color: var(--deep-pink);
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  margin: 0 auto 40px;
+}
+
+/* Photo Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.photo-card {
+  background: white;
+  padding: 12px 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px #8f526317;
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
+
+.photo-card:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) rotate(0);
+}
+
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #ffe0eb;
+}
+
+.photo-card figcaption {
+  padding: 16px 4px 0;
+  font-size: 0.8rem;
+}
+
+.photo-note {
+  color: #a58a97;
+  font-size: 0.75rem;
+  margin-top: 22px;
+}
+
+/* Video Grid Layout */
+.video-section {
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.video-card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #000;
+}
+
+.video-card p {
+  color: #d63370;
+  margin: 15px 0 5px;
+}
+
+/* Envelope and Love Letter Section */
+.love-section {
+  max-width: none;
+  background: var(--light-pink);
+}
+
+.envelope {
+  max-width: 460px;
+  margin: 35px auto 0;
+  padding: 40px 25px;
+  border: 1px solid #f3c8d9;
+  border-radius: 20px;
+  background: #fffafa;
+  box-shadow: 0 15px 40px #b55c7a12;
+}
+
+.envelope-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.envelope p {
+  line-height: 1.8;
+}
+
+.letter {
+  max-width: 680px;
+  margin: 35px auto 0;
+  padding: 35px;
+  background: white;
+  border: 1px solid #f4d8e3;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px #b55c7a10;
+  text-align: left;
+  line-height: 2;
+  animation: appear 0.6s ease;
+}
+
+.letter p {
+  margin-bottom: 18px;
+}
+
+.letter-greeting,
+.letter-signature {
+  color: var(--deep-pink);
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+}
+
+.letter-signature {
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.reasons-section {
+  max-width: 900px;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.reason {
+  padding: 23px 18px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #f8dce7;
+  box-shadow: 0 6px 20px #b55c7a0b;
+  line-height: 1.7;
+  transition: transform 0.2s;
+}
+
+.reason:hover {
+  transform: translateY(-4px);
+}
+
+/* Birthday Final Section & Animations */
+.final-section {
+  padding: 100px 24px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffe8f0, #fff4f7);
+}
+
+.cake {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.final-section > p:not(.eyebrow):not(.final-message) {
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.9;
+  color: #866b79;
+}
+
+.final-message {
+  max-width: 600px;
+  margin: 30px auto 0;
+  color: var(--deep-pink);
+  font-size: 1.1rem;
+  line-height: 2;
+  animation: appear 0.7s ease;
+}
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: #fffaf8;
+  color: #987b8b;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: 10;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+}
+
+/* Corner White Tulips Decoration */
+.white-tulips {
+  position: fixed;
+  z-index: 5;
+  bottom: 25px;
+  font-size: 28px;
+  letter-spacing: 5px;
+  opacity: 0.85;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(220, 170, 190, 0.2));
+  animation: tulip-sway 4s ease-in-out infinite;
+}
+
+.tulips-left {
+  left: 18px;
+}
+
+.tulips-right {
+  right: 18px;
+  animation-delay: 1.5s;
+}
+
+/* Floating White Tulips Background */
+.floating-tulips {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.floating-tulip {
+  position: absolute;
+  bottom: -60px;
+  font-size: 30px;
+  opacity: 0;
+  animation: tulip-float linear forwards;
+  filter: drop-shadow(0 3px 5px rgba(180, 140, 160, 0.15));
+}
+
+/* Keyframes Elements */
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tulip-sway {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes tulip-float {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.85; }
+  50% { transform: translateY(-50vh) translateX(25px) rotate(12deg); }
+  90% { opacity: 0.75; }
+  100% {
+    transform: translateY(-115vh) translateX(-20px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+/* --- MOBILE SPECIFIC MEDIA QUERY (<700px) --- */
+@media (max-width: 700px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 35px auto 0;
+  }
+
+  .photo-card:nth-child(n) {
+    transform: none;
+  }
+
+  .photo-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-card {
+    padding: 10px;
+  }
+
+  .video-card video {
+    max-height: 320px;
+  }
+
+  .reasons {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 16px;
+  }
+
+  .envelope {
+    padding: 30px 16px;
+    margin: 25px 10px 0;
+  }
+
+  .letter {
+    padding: 25px 20px;
+    margin: 25px 10px 0;
+    line-height: 1.8;
+  }
+  
+  .letter p {
+    font-size: 0.95rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 2px;
+  }
+
+  .white-tulips {
+    font-size: 20px;
+    letter-spacing: 1px;
+    bottom: 12px;
+  }
+
+  .tulips-left {
+    left: 5px;
+  }
+
+  .tulips-right {
+    right: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
